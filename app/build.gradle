@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion '26.0.2'
+    compileSdkVersion 29
+    buildToolsVersion '29.0.3'
     defaultConfig {
         applicationId "com.bin.david.smarttable"
-        minSdkVersion 15
-        targetSdkVersion 25
+        minSdkVersion 21
+        targetSdkVersion 29
         versionCode 1
         versionName "1.8.5"
         multiDexEnabled true
@@ -49,4 +49,7 @@ dependencies {
     implementation files('libs/poi-3.17.jar')
     implementation files('libs/poi-scratchpad-3.17.jar')
     compile 'com.vincent.filepicker:MultiTypeFilePicker:1.0.5'
+
+    compile "com.squareup.okhttp3:okhttp:3.12.0"
+
 }

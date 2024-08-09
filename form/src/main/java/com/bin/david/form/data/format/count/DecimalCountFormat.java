@@ -1,5 +1,7 @@
 package com.bin.david.form.data.format.count;
 
+import java.math.BigDecimal;
+
 /**
  * Created by huang on 2017/11/6.
  */
@@ -28,11 +30,14 @@ public class DecimalCountFormat<T> implements ICountFormat<T,Double> {
 
     @Override
     public String getCountString() {
-        return String.valueOf(totalDoubleCount);
+        BigDecimal b = new BigDecimal(totalDoubleCount);
+        //保留2位小数
+        double result = b.setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
+        return String.valueOf(result);
     }
 
     @Override
     public void clearCount() {
-        totalDoubleCount = 0;
+        totalDoubleCount = 0.0;
     }
 }

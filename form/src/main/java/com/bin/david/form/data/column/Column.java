@@ -16,6 +16,7 @@ import com.bin.david.form.listener.OnColumnItemClickListener;
 import com.bin.david.form.utils.LetterUtils;
 
 import java.lang.reflect.Field;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -424,6 +425,8 @@ public class Column<T> implements Comparable<Column> {
             if(LetterUtils.isBasicType(t)){
                 if(LetterUtils.isNumber(t)) {
                     countFormat = new NumberCountFormat<>();
+                }else if(t instanceof BigDecimal){
+
                 }else{
                     countFormat = new DecimalCountFormat<>();
                 }
