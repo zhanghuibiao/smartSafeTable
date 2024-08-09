@@ -6,18 +6,18 @@ import java.math.BigDecimal;
  * Created by huang on 2017/11/6.
  */
 
-public class DecimalCountFormat<T> implements ICountFormat<T,Double> {
+public class DecimalCountFormat<T> implements ICountFormat<T, Double> {
 
-    private double  totalDoubleCount =0;
+    private double totalDoubleCount = 0;
 
 
     @Override
     public void count(T t) {
-         Number number = (Number) t;
-         if(number instanceof Double){
-            totalDoubleCount+=number.doubleValue();
-        }else if(number instanceof Float){
-            totalDoubleCount+=number.floatValue();
+        Number number = (Number) t;
+        if (number instanceof Double) {
+            totalDoubleCount += number.doubleValue();
+        } else if (number instanceof Float) {
+            totalDoubleCount += number.floatValue();
         }
     }
 

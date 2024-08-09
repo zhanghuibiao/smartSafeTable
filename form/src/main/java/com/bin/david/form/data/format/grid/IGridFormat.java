@@ -59,7 +59,6 @@ public interface IGridFormat {
     /**
      * 绘制表格边框网格
      * @param canvas 画布
-     * @param rect 方位
      * @param paint 画笔
      */
      void drawTableBorderGrid(Canvas canvas, int left,int top,int right,int bottom,Paint paint);
